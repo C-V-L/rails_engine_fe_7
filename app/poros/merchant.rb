@@ -1,8 +1,8 @@
 class Merchant
   attr_reader :id, :name
-  
-  def initialize(attrtibutes)
-    @id = attrtibutes[:id]
-    @name = attrtibutes[:attributes][:name]
+
+  def initialize(attributes)
+    @id = attributes[:id]
+    @name = attributes[:attributes][:name]
   end
 end

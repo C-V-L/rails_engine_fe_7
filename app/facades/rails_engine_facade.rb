@@ -9,4 +9,16 @@ class RailsEngineFacade
       Merchant.new(merchant)
     end
   end
+
+  def merchant_items
+    items = RailsEngineService.merchant_items(@params[:id])
+    items[:data].map do |item|
+      Item.new(item)
+    end
+  end
+
+  def merchant
+    merchant = RailsEngineService.merchant(@params[:id])
+    Merchant.new(merchant[:data])
+  end
 end

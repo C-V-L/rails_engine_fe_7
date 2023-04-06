@@ -1,5 +1,5 @@
 All Merchants:
 
 <% @facade.merchants.each do |merchant| %>
-<%= link_to "#{merchant.name}" %> <br>
+<%= link_to "#{merchant.name}", "/merchants/#{merchant.id}" %> <br>
 <% end %>
